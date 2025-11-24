@@ -6,8 +6,12 @@ import joblib
 def train():
 
     df = pd.read_csv("../data/raw/gas_consumption.csv", parse_dates=["date"])
-
     df["hour"] = df["date"].dt.hour
+    df["weekday"] = df["date"].dt.weekday
+    df["is_weekend"] = (df["weekday"] >= 5).astype(int)
+    df["lag1"] = df["consumption_m3"].shift(1)
+    # df["lag24"] = df["consumption_m3"].shift(24)
+    df = df.dropna()
 
     X = df[["temp", "humidity", "wind", "hour"]]
     y = df["consumption_m3"]
