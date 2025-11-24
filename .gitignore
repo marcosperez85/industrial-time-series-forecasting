@@ -1,0 +1,26 @@
+# --- SO / archivos de sistema ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.code-workspace
+*.sw?
+*.swo
+*.swp
+
+# --- Logs ---
+*.log
+
+# --- Variables de entorno ---
+.env
+.env.*
+!.env.example
+
+# --- Archivos temporales / backups ---
+*.tmp
+*.orig
+*~
