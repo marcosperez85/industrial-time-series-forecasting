@@ -6,7 +6,7 @@ import pandas as pd
 app = FastAPI(title="Gas Consumption Prediction API")
 
 # Cargamos el modelo (el que prefieras de tus comparaciones)
-model = joblib.load("models/model.pkl")
+model = joblib.load("models/linear_regression_model.pkl")
 #model = joblib.load("models/randomforest_model.pkl")
 
 class PredictRequest(BaseModel):
@@ -17,7 +17,7 @@ class PredictRequest(BaseModel):
     weekday: int
     is_weekend: int
     lag1: float
-    lag24: float
+    # lag24: float
 
 @app.post("/predict")
 def predict(req: PredictRequest):
