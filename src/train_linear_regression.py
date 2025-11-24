@@ -13,7 +13,8 @@ def train():
     # df["lag24"] = df["consumption_m3"].shift(24)
     df = df.dropna()
 
-    X = df[["temp", "humidity", "wind", "hour"]]
+    # X = df[["temp", "humidity", "wind", "hour"]]
+    X = df[["temp", "humidity", "wind", "hour", "weekday", "is_weekend", "lag1"]]
     y = df["consumption_m3"]
 
     X_train, X_test, y_train, y_test = train_test_split(
