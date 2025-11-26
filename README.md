@@ -75,7 +75,7 @@ El dataset sintético incluye 6 features principales que representan variables c
 - Interacciones: `demand_efficiency_interaction`, `temp_demand_interaction`
 - Transformaciones: `temp_squared`
 
-## 🚀 Instalación y Uso
+## 🚀 Instalación
 
 ### Prerrequisitos
 - Python 3.8+
@@ -99,6 +99,8 @@ El dataset sintético incluye 6 features principales que representan variables c
    ```bash
    pip install -r requirements.txt
    ```
+
+## 🚀 Pasos para creación del dataset y uso de modelos
 
 ### 1. Generar Dataset
 ```bash
