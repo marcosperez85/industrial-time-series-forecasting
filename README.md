@@ -100,6 +100,11 @@ El dataset sintético incluye 6 features principales que representan variables c
    pip install -r requirements.txt
    ```
 
+4. Registrar el Kernel con:
+   ```bash
+   python -m ipykernel install --user --name industrial-time-series-forecasting --display-name "Python (.venv industrial-time-series-forecasting)"
+   ```   
+
 ## 🚀 Pasos para creación del dataset y uso de modelos
 
 ### 1. Generar Dataset
